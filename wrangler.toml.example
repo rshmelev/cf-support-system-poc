@@ -1,0 +1,23 @@
+name = "support-system"
+type = "javascript"
+compatibility_date = "2022-04-05"
+zone_id = "<<<<< YOUR ZONE ID, copy here: https://dash.cloudflare.com >>>>>>"
+route = "<<<<<< should be YOUR_DOMAIN/* , ...or alternatively use workers_dev = true >>>>>"
+kv_namespaces = [ { binding = "KV", id = "<<<<<<< wrangler kv:namespace create KV >>>>>>>>", preview_id = "" } ]
+[vars]
+WELCOME_MESSAGE="Hey! Humans are reading this chat, so please ask any questions :)"
+BYE_MESSAGE=":)"
+# right click on channel, use "Copy link" and get URL like this: 
+# https://workspace.slack.com/archives/C033BGXH96B <-- this is channel id
+SLACK_SUPPORT_CHANNEL_ID="C033BGXH96B"
+# actually better to put that in secrets
+TG_BOT_TOKEN="<<<<<< go to @botFather tg bot to get this >>>>>>"
+SLACK_TOKEN="<<<<<< it starts with xoxb-...., go to https://api.slack.com/ to get it  >>>>>>"
+
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "modules"
+main = "./index.mjs"
+

@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    // needed for inversify and other libs, turn it to false if not needed
+    "experimentalDecorators": true,
+
+    "target": "ES2022",
+    "lib": ["ES2021"],
+    "alwaysStrict": true,
+    "strict": true,
+    "noEmitOnError": true,
+    "moduleResolution": "node",
+
+    "outDir": "tscOutDir",
+    "rootDir": "src",
+
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+
+    "declaration": false /* Generates corresponding '.d.ts' file. */,
+    "declarationMap": false /* Generates a sourcemap for each corresponding '.d.ts' file. */,
+    "sourceMap": true /* Generates corresponding '.map' file. */,
+
+    "types": ["@cloudflare/workers-types", "jest", "@types/service-worker-mock"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "test"]
+}

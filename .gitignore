@@ -1,0 +1,17 @@
+dist
+node_modules
+transpiled
+/.idea/
+/target
+/tscOutDir
+**/*.rs.bk
+Cargo.lock
+bin/
+pkg/
+wasm-pack.log
+worker/
+.cargo-ok
+*.local
+*.local.*
+.mf
+wrangler.toml
